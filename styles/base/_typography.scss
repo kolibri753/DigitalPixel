@@ -1,0 +1,83 @@
+@use "variables" as v;
+@use "mixins" as m;
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+html {
+  font-family: v.$inter;
+}
+
+body {
+  background-color: black;
+}
+
+ul,
+ol {
+  padding: 0;
+  margin: 0;
+}
+
+body,
+h1,
+h2,
+h3,
+h4,
+h5,
+p,
+li {
+  margin: 0;
+}
+
+ul {
+  list-style: none;
+}
+
+a {
+  text-decoration: none;
+}
+
+.h1 {
+  font-size: map-get(v.$font-sizes, h1);
+  font-weight: map-get(v.$font-weights, h1);
+  line-height: map-get(v.$line-heights, h1);
+  color: map-get(v.$colors, gray-0);
+}
+
+.h2 {
+  font-size: map-get(v.$font-sizes, h2);
+  font-weight: map-get(v.$font-weights, h2);
+  line-height: map-get(v.$line-heights, h2);
+  color: map-get(v.$colors, gray-0);
+}
+
+.h3 {
+  font-size: map-get(v.$font-sizes, h3);
+  font-weight: map-get(v.$font-weights, h3);
+  line-height: map-get(v.$line-heights, h3);
+  color: map-get(v.$colors, gray-0);
+}
+
+.h5 {
+  font-size: map-get(v.$font-sizes, h5);
+  font-weight: map-get(v.$font-weights, h5);
+  line-height: map-get(v.$line-heights, h4);
+  color: map-get(v.$colors, primary-100);
+}
+
+.body-lg {
+  font-size: map-get(v.$font-sizes, body-lg);
+  font-weight: map-get(v.$font-weights, body-lg);
+  line-height: map-get(v.$line-heights, body-lg);
+  color: map-get(v.$colors, gray-30);
+}
+
+.body-sm {
+  font-size: map-get(v.$font-sizes, body-sm);
+  font-weight: map-get(v.$font-weights, body-sm);
+  line-height: map-get(v.$line-heights, body-sm);
+  color: map-get(v.$colors, gray-0);
+}

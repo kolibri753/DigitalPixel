@@ -1,0 +1,41 @@
+@forward "container";
+@use "../base/variables" as v;
+
+.services {
+  @extend .container;
+  width: 100%;
+
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  gap: 20px;
+  margin-bottom: 200px;
+
+  &__kicker {
+    text-align: justify;
+    width: 100%;
+  }
+
+  &__title {
+    text-align: justify;
+  }
+
+  &__text {
+    text-align: justify;
+  }
+
+  &__card {
+    background: linear-gradient(
+        180deg,
+        rgba(41, 46, 75, 0.375) 0%,
+        rgba(48, 58, 120, 0.5) 100%
+      ),
+      linear-gradient(
+        180deg,
+        rgba(223, 29, 255, 0.2) 0%,
+        rgba(72, 205, 255, 0) 100%
+      );
+
+    justify-content: center;
+  }
+}

@@ -1,0 +1,88 @@
+// Import Fonts
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@400;600;900&display=swap");
+
+// Font Variables
+$inter: "Inter", sans-serif;
+
+// Typography System
+$font-sizes: (
+  h1: 85px,
+  h2: 50px,
+  h3: 32px,
+  h4: 28px,
+  h5: 20px,
+  body-lg: 16px,
+  body-sm: 14px,
+  button: 16px,
+  small: 12px,
+);
+
+$font-weights: (
+  h1: 900,
+  h2: 900,
+  h3: 600,
+  h4: 900,
+  h5: 600,
+  body-lg: 400,
+  body-sm: 600,
+  button: 600,
+  small: 600
+);
+
+$line-heights: (
+  h1: 130%,
+  h2: 130%,
+  h3: 130%,
+  h4: 130%,
+  h5: 0%,
+  body-lg: 140%,
+  body-sm: 140%,
+  button: 0%,
+  small: 140%,
+);
+
+// Colors
+$colors: (
+  primary-100: #ffcf0f,
+  gradient: linear-gradient(225deg, #18C8FF 14.89%, #933FFE 85.85%),
+
+  // Gray Shades
+  gray-bg: #0b0b0f,
+  gray-100: #212529,
+  gray-80: #495057,
+  gray-60: #6e7584,
+  gray-50: #adb5bd,
+  gray-40: #ced4da,
+  gray-30: #e9ecef,
+  gray-20: #f1f3f5,
+  gray-10: #f8f9fa,
+  gray-0: #ffffff,
+
+  // System Colors
+  error: #991d21,
+  info: #4f75ff,
+  warning: #ff9f4c,
+  success: #7ec136,
+);
+
+// Breakpoints 
+$breakpoints: (
+  "xs": (
+    max-width: 0px,
+  ),
+  "sm": (
+    max-width: 576px,
+  ),
+  "md": (
+    max-width: 768px,
+  ),
+  "lg": (
+    max-width: 992px,
+  ),
+  "xl": (
+    max-width: 1200px,
+  ),
+  "xxl": (
+    max-width: 1400px,
+  ),
+) !default;

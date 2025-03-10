@@ -1,0 +1,48 @@
+@forward "container";
+@use "../base/variables" as v;
+
+.token-seal {
+  @extend .container;
+  margin: 200px 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  &__title {
+    margin-bottom: 24px;
+  }
+
+  &__text {
+    max-width: 500px;
+    margin-bottom: 100px;
+    text-align: center;
+  }
+}
+
+.cards {
+  display: flex;
+  gap: 20px;
+  flex-wrap: wrap;
+  justify-content: center;
+  margin-bottom: 200px;
+
+  &__card {
+    background: linear-gradient(
+      97.94deg,
+      rgba(41, 46, 75, 0.225) 0%,
+      rgba(37, 40, 58, 0.105) 100%,
+      rgba(41, 46, 75, 0.105) 100%
+    ),
+    radial-gradient(
+      65.97% 92.77% at 113.3% 120.61%,
+      rgba(62, 238, 227, 0.5) 0%,
+      rgba(62, 69, 238, 0) 100%
+    ),
+    radial-gradient(
+      60.52% 85.11% at 9.86% -26.12%,
+      rgba(223, 29, 255, 0.35) 0%,
+      rgba(72, 205, 255, 0) 100%
+    );
+  }
+}
+

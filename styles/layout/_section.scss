@@ -1,0 +1,58 @@
+@forward "container";
+@use "../base/variables" as v;
+@use "../base/mixins" as m;
+
+.section {
+  @extend .container;
+
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 115px;
+  margin-bottom: 200px;
+
+  &__left {
+    max-width: 50%;
+  }
+
+  &__title {
+    margin-bottom: 24px;
+  }
+
+  &__right {
+    display: flex;
+    flex-direction: column;
+    gap: 50px;
+  }
+
+  &__box {
+    background: linear-gradient(
+        98deg,
+        rgba(41, 46, 75, 0.225) 0%,
+        rgba(37, 40, 58, 0.105) 100%
+      ),
+      radial-gradient(
+        65.97% 92.77% at 113.3% 120.61%,
+        rgba(62, 238, 227, 0.5) 0%,
+        rgba(62, 69, 238, 0) 100%
+      ),
+      radial-gradient(
+        144.76% 629.53% at 106.71% 0%,
+        rgba(223, 29, 255, 0.35) 0%,
+        rgba(72, 205, 255, 0) 100%
+      ),
+      map-get(v.$colors, "gray-100");
+    color: map-get(v.$colors, gray-0);
+    padding: 27.5px 63px;
+    border-radius: 25px;
+
+    opacity: 0;
+    transform: translateY(30px);
+    @include m.transition(opacity 0.8s ease-out, transform 0.8s ease-out);
+
+    &--visible {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+}

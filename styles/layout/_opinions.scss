@@ -1,0 +1,97 @@
+@forward "container";
+@use "../base/variables" as v;
+@use "../base/mixins" as m;
+
+.opinions {
+  @extend .container;
+  margin-bottom: 200px;
+
+  &__title {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    cursor: pointer;
+    @include m.transition(color 0.3s ease-in-out);
+
+    &.active {
+      color: map-get(v.$colors, primary-100);
+
+      .opinions__image-wrapper::after {
+        background: map-get(v.$colors, primary-100);
+      }
+    }
+  }
+
+  &__image-wrapper {
+    position: relative;
+    display: inline-block;
+
+    img {
+      width: 50px;
+      height: 80px;
+      border-radius: 25px;
+      position: relative;
+      z-index: 2;
+      object-fit: cover;
+    }
+
+    &::after {
+      content: "";
+      position: absolute;
+      width: 50px;
+      height: 80px;
+      background: linear-gradient(180deg, #ffffff 0%, #606060 100%);
+      border-radius: 25px;
+      top: 0px;
+      left: 5px;
+      z-index: 1;
+      @include m.transition(background 0.3s ease-in-out);
+    }
+  }
+
+  &__container {
+    background: linear-gradient(
+        97.94deg,
+        rgba(41, 46, 75, 0.375) 0%,
+        rgba(41, 46, 75, 0.175) 100%
+      ),
+      radial-gradient(
+        47.58% 75.96% at -5.37% -16.9%,
+        rgba(61, 165, 245, 0.5) 12.1%,
+        rgba(62, 238, 227, 0.1) 62.6%,
+        rgba(62, 69, 238, 0) 94.1%
+      ),
+      radial-gradient(
+        48.2% 65.91% at 96.02% 90.71%,
+        rgba(223, 29, 255, 0.4) 0%,
+        rgba(72, 205, 255, 0) 100%
+      );
+
+    padding: 70px;
+    border-radius: 25px;
+    display: flex;
+    gap: 100px;
+  }
+
+  &__list {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+    width: 30%;
+  }
+
+  &__content {
+    flex: 1;
+    position: relative;
+  }
+
+  &__content::before {
+    content: "";
+    position: absolute;
+    width: 2px;
+    left: -13%;
+    top: 0;
+    height: 100%;
+    background: map-get(v.$colors, gray-40);
+  }
+}
