@@ -1,0 +1,127 @@
+@use "../base/variables" as v;
+@use "../base/mixins" as m;
+
+.plan {
+  background: linear-gradient(
+      344deg,
+      rgba(41, 46, 75, 0.225) 25%,
+      rgba(37, 40, 58, 0.105) 75%
+    ),
+    radial-gradient(
+      circle at 103% -8%,
+      rgba(62, 238, 227, 0.3) 0%,
+      rgba(62, 69, 238, 0) 100%
+    ),
+    radial-gradient(
+      circle at -19% 59%,
+      rgba(223, 29, 255, 0.25) 0%,
+      rgba(72, 205, 255, 0) 100%
+    );
+
+  max-width: 350px;
+  border-radius: 25px;
+  padding: 27.5px 22px;
+
+  overflow: hidden;
+  @include m.transition(transform 0.3s ease-in-out);
+
+  &::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(
+        344deg,
+        rgba(41, 46, 75, 0.225) 25%,
+        rgba(37, 40, 58, 0.105) 75%
+      ),
+      radial-gradient(
+        circle at 103% -8%,
+        rgba(62, 238, 227, 0.3) 0%,
+        rgba(62, 69, 238, 0) 100%
+      ),
+      radial-gradient(
+        circle at -19% 59%,
+        rgba(223, 29, 255, 0.25) 0%,
+        rgba(72, 205, 255, 0) 100%
+      );
+    transition: opacity 0.3s ease-in-out;
+    z-index: -1;
+  }
+
+  &:hover {
+    transform: scale(1.05);
+
+    &::before {
+      opacity: 0.7;
+    }
+  }
+
+  &__title {
+    margin-bottom: 12px;
+  }
+
+  &__text {
+    margin-bottom: 16px;
+  }
+
+  &__list {
+    list-style: disc;
+    margin: 16px 0 32px 16px;
+  }
+
+  &__item + &__item {
+    margin-top: 4px;
+  }
+
+  &__btn {
+    width: 100%;
+  }
+}
+
+.price {
+  position: relative;
+  border-bottom: 2px solid map-get(v.$colors, gray-30);
+
+  &__grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    row-gap: 1rem;
+    column-gap: 1rem;
+    position: relative;
+  }
+
+  &__cell {
+    color: map-get(v.$colors, gray-30);
+    margin-bottom: 16px;
+  }
+
+  &__duration {
+    color: map-get(v.$colors, gray-60);
+    margin-bottom: 16px;
+  }
+
+  &__highlight {
+    color: map-get(v.$colors, primary-100);
+
+    &--bigger {
+      font-size: 24px;
+      font-weight: 700;
+    }
+  }
+
+  &__crossed {
+    text-decoration: line-through;
+  }
+
+  &__discount {
+    position: absolute;
+    top: 50%;
+    right: 0;
+    background-color: map-get(v.$colors, accented-100);
+    padding: 2px 4px;
+    font-weight: 700p;
+    font-size: 12px;
+    border-radius: 12px;
+    white-space: nowrap;
+  }
+}

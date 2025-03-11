@@ -1,0 +1,32 @@
+@forward "container";
+@use "../base/variables" as v;
+@use "../base/mixins" as m;
+
+.plans {
+  @extend .container;
+  margin-bottom: 200px;
+  display: flex;
+  flex-direction: column;
+
+  &__strap {
+    text-align: center;
+  }
+
+  &__title {
+    text-align: center;
+    margin-bottom: 24px;
+  }
+
+  &__text {
+    text-align: center;
+    align-self: center;
+    max-width: 500px;
+    margin-bottom: 100px;
+  }
+
+  &__availible {
+    display: flex;
+    justify-content: space-between;
+    gap: 10px;
+  }
+}

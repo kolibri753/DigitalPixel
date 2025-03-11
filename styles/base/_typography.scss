@@ -61,6 +61,13 @@ a {
   color: map-get(v.$colors, gray-0);
 }
 
+.h4 {
+  font-size: map-get(v.$font-sizes, h4);
+  font-weight: map-get(v.$font-weights, h4);
+  line-height: map-get(v.$line-heights, h4);
+  color: map-get(v.$colors, gray-0);
+}
+
 .h5 {
   font-size: map-get(v.$font-sizes, h5);
   font-weight: map-get(v.$font-weights, h5);
@@ -80,4 +87,11 @@ a {
   font-weight: map-get(v.$font-weights, body-sm);
   line-height: map-get(v.$line-heights, body-sm);
   color: map-get(v.$colors, gray-0);
+}
+
+.small {
+  font-size: map-get(v.$font-sizes, small);
+  font-weight: map-get(v.$font-weights, small);
+  line-height: map-get(v.$line-heights, small);
+  color: map-get(v.$colors, gray-20);
 }
