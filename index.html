@@ -540,6 +540,36 @@
       </div>
     </section>
 
+    <section class="video">
+      <div class="video__about">
+        <h2 class="video__title h2">Lorem ipsum</h2>
+        <p class="video__description">
+          Lorem ipsum dolor sit amet, consectetur adipiscing elit sed do!
+        </p>
+      </div>
+
+      <div class="video__container" id="videoTrigger">
+        <img class="video__img" src="img/video/video-preview.png" alt="video" />
+        <button class="video__play">
+          <img class="video__play-icon" src="img/video/play.svg" alt="play" />
+        </button>
+      </div>
+    </section>
+
+    <div class="modal" id="videoModal">
+      <div class="modal__overlay"></div>
+      <div class="modal__content">
+        <span class="modal__close">&times;</span>
+        <iframe
+          class="modal__video"
+          id="modalVideo"
+          frameborder="0"
+          allow="autoplay; encrypted-media"
+          allowfullscreen
+        ></iframe>
+      </div>
+    </div>
+
     <footer class="footer">
       <a class="footer__logo logo" href="#">
         <img src="img/logo.svg" alt="Cryptolly" />
