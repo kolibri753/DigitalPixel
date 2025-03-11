@@ -45,6 +45,14 @@ a {
   font-weight: map-get(v.$font-weights, h1);
   line-height: map-get(v.$line-heights, h1);
   color: map-get(v.$colors, gray-0);
+
+  @include m.respond-to("md") {
+    font-size: 60px;
+  }
+
+  @include m.respond-to("sm") {
+    font-size: 40px;
+  }
 }
 
 .h2 {
@@ -52,6 +60,14 @@ a {
   font-weight: map-get(v.$font-weights, h2);
   line-height: map-get(v.$line-heights, h2);
   color: map-get(v.$colors, gray-0);
+
+  @include m.respond-to("md") {
+    font-size: 40px;
+  }
+
+  @include m.respond-to("sm") {
+    font-size: 28px;
+  }
 }
 
 .h3 {
@@ -59,6 +75,14 @@ a {
   font-weight: map-get(v.$font-weights, h3);
   line-height: map-get(v.$line-heights, h3);
   color: map-get(v.$colors, gray-0);
+
+  @include m.respond-to("md") {
+    font-size: 28px;
+  }
+
+  @include m.respond-to("sm") {
+    font-size: 22px;
+  }
 }
 
 .h4 {

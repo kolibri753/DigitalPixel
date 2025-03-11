@@ -8,6 +8,14 @@
   display: flex;
   flex-direction: column;
 
+  @include m.respond-to("xl") {
+    margin-bottom: 100px;
+  }
+
+  @include m.respond-to("md") {
+    margin-bottom: 50px;
+  }
+
   &__strap {
     text-align: center;
   }
@@ -21,6 +29,15 @@
     align-self: center;
     max-width: 500px;
     margin-bottom: 80px;
+
+    @include m.respond-to("xl") {
+      max-width: 100%;
+      margin-bottom: 50px;
+    }
+
+    @include m.respond-to("md") {
+      margin-bottom: 20px;
+    }
   }
 }
 
@@ -50,6 +67,19 @@
   border-radius: 16px;
   margin-bottom: 24px;
 
+  @include m.respond-to("xl") {
+    padding: 10px 30px;
+  }
+
+  @include m.respond-to("md") {
+    padding: 10px 20px;
+  }
+
+  @include m.respond-to("sm") {
+    display: flex;
+    flex-direction: column;
+  }
+
   &__title {
     margin-bottom: 8px;
   }
@@ -64,6 +94,7 @@
 
   &__skills {
     display: flex;
+    flex-wrap: wrap;
     gap: 12px;
   }
 
@@ -71,5 +102,26 @@
     padding: 6px 16px;
     border: 1px solid map-get(v.$colors, primary-100);
     border-radius: 28px;
+  }
+
+  &__img {
+    width: 205px;
+    height: 205px;
+    object-fit: contain;
+
+    @include m.respond-to("xl") {
+      width: 92px;
+      height: 107px;
+    }
+
+    @include m.respond-to("md") {
+      width: 66px;
+      height: 77px;
+    }
+
+    @include m.respond-to("sm") {
+      width: 100px;
+      height: 116px;
+    }
   }
 }

@@ -6,9 +6,20 @@
   @extend .container;
 
   display: flex;
+  overflow: hidden;
+
+  @include m.respond-to("xl") {
+    flex-direction: column;
+    align-items: center;
+  }
 
   &__about {
     width: 40%;
+
+    @include m.respond-to("xl") {
+      width: 100%;
+      text-align: center;
+    }
   }
 
   &__title {
@@ -28,9 +39,17 @@
   position: relative;
   display: none;
   opacity: 0;
+  margin-bottom: 200px;
   transform: translateX(-30px);
   @include m.transition(opacity 0.8s ease-out, transform 0.8s ease-out);
-  margin-bottom: 200px;
+
+  @include m.respond-to("xl") {
+    margin-bottom: 100px;
+  }
+
+  @include m.respond-to("md") {
+    margin-bottom: 50px;
+  }
 
   &--active {
     display: block;
@@ -47,6 +66,10 @@
     position: absolute;
     bottom: 100px;
     right: 0;
+
+    @include m.respond-to("md") {
+      right: 200px;
+    }
 
     background: linear-gradient(
         97.94deg,

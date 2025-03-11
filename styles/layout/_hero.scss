@@ -1,5 +1,6 @@
 @forward "container";
 @use "../base/variables" as v;
+@use "../base/mixins" as m;
 
 .hero {
   @extend .container;
@@ -12,13 +13,18 @@
   align-items: center;
   text-align: center;
   gap: 16px;
+  margin-bottom: 200px;
+
+  @include m.respond-to("xl") {
+    margin-bottom: 100px;
+  }
+
+  @include m.respond-to("md") {
+    margin-bottom: 50px;
+  }
 
   &__text {
     color: map-get(v.$colors, gray-40);
-  }
-
-  &__button {
-    margin-top: 16px;
-    margin-bottom: 200px;
+    margin-bottom: 16px;
   }
 }

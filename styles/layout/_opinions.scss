@@ -6,6 +6,14 @@
   @extend .container;
   margin-bottom: 200px;
 
+  @include m.respond-to("xl") {
+    margin-bottom: 100px;
+  }
+
+  @include m.respond-to("md") {
+    margin-bottom: 50px;
+  }
+
   &__title {
     display: flex;
     align-items: center;
