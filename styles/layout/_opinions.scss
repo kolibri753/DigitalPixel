@@ -1,4 +1,5 @@
 @forward "container";
+@use "sass:map";
 @use "../base/variables" as v;
 @use "../base/mixins" as m;
 
@@ -22,10 +23,10 @@
     @include m.transition(color 0.3s ease-in-out);
 
     &.active {
-      color: map-get(v.$colors, primary-100);
+      color: map.get(v.$colors, primary-100);
 
       .opinions__image-wrapper::after {
-        background: map-get(v.$colors, primary-100);
+        background: map.get(v.$colors, primary-100);
       }
     }
   }
@@ -100,6 +101,6 @@
     left: -13%;
     top: 0;
     height: 100%;
-    background: map-get(v.$colors, gray-100);
+    background: map.get(v.$colors, gray-100);
   }
 }

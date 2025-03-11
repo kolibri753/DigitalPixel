@@ -617,6 +617,9 @@ a {
     right: 200px;
   }
 }
+.speaker__image {
+  height: 528px;
+}
 .speaker__title {
   color: #ffffff;
   margin-bottom: 24px;

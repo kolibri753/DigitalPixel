@@ -1,3 +1,4 @@
+@use "sass:map";
 @use "../base/variables" as v;
 @use "../base/mixins" as m;
 
@@ -5,13 +6,13 @@ $button-gradient-pressed: linear-gradient(226.55deg, #18C8FF 7%, #933FFE 29.53%)
 $button-gradient-focus: linear-gradient(225deg, #18C8FF 14.89%, #933FFE 85.85%);
 
 .button {
-  font-size: map-get(v.$font-sizes, button);
-  font-weight: map-get(v.$font-weights, button);
-  line-height: map-get(v.$line-heights, body-lg);
+  font-size: map.get(v.$font-sizes, button);
+  font-weight: map.get(v.$font-weights, button);
+  line-height: map.get(v.$line-heights, body-lg);
   text-align: center;
 
-  background: map-get(v.$colors, gradient);
-  color: map-get(v.$colors, gray-0);
+  background: map.get(v.$colors, gradient);
+  color: map.get(v.$colors, gray-0);
   padding: 12px 24px;
   border: none;
   border-radius: 8px;
@@ -32,7 +33,7 @@ $button-gradient-focus: linear-gradient(225deg, #18C8FF 14.89%, #933FFE 85.85%);
   }
 
   &:disabled {
-    background: map-get(v.$colors, gray-60);
+    background: map.get(v.$colors, gray-60);
     cursor: not-allowed;
   }
 }

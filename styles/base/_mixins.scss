@@ -1,3 +1,5 @@
+@use "sass:meta";
+@use "sass:map";
 @use "variables" as v;
 
 @mixin transition($x...) {
@@ -14,8 +16,8 @@
 }
 
 @mixin respond-to($breakpoint) {
-  @if map-has-key(v.$breakpoints, $breakpoint) {
-    @media #{inspect(map-get(v.$breakpoints, $breakpoint))} {
+  @if map.has-key(v.$breakpoints, $breakpoint) {
+    @media #{meta.inspect(map.get(v.$breakpoints, $breakpoint))} {
       @content;
     }
   } @else {

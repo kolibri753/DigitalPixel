@@ -1,3 +1,4 @@
+@use "sass:map";
 @use "variables" as v;
 @use "mixins" as m;
 
@@ -41,10 +42,10 @@ a {
 }
 
 .h1 {
-  font-size: map-get(v.$font-sizes, h1);
-  font-weight: map-get(v.$font-weights, h1);
-  line-height: map-get(v.$line-heights, h1);
-  color: map-get(v.$colors, gray-0);
+  font-size: map.get(v.$font-sizes, h1);
+  font-weight: map.get(v.$font-weights, h1);
+  line-height: map.get(v.$line-heights, h1);
+  color: map.get(v.$colors, gray-0);
 
   @include m.respond-to("md") {
     font-size: 60px;
@@ -56,10 +57,10 @@ a {
 }
 
 .h2 {
-  font-size: map-get(v.$font-sizes, h2);
-  font-weight: map-get(v.$font-weights, h2);
-  line-height: map-get(v.$line-heights, h2);
-  color: map-get(v.$colors, gray-0);
+  font-size: map.get(v.$font-sizes, h2);
+  font-weight: map.get(v.$font-weights, h2);
+  line-height: map.get(v.$line-heights, h2);
+  color: map.get(v.$colors, gray-0);
 
   @include m.respond-to("md") {
     font-size: 40px;
@@ -71,10 +72,10 @@ a {
 }
 
 .h3 {
-  font-size: map-get(v.$font-sizes, h3);
-  font-weight: map-get(v.$font-weights, h3);
-  line-height: map-get(v.$line-heights, h3);
-  color: map-get(v.$colors, gray-0);
+  font-size: map.get(v.$font-sizes, h3);
+  font-weight: map.get(v.$font-weights, h3);
+  line-height: map.get(v.$line-heights, h3);
+  color: map.get(v.$colors, gray-0);
 
   @include m.respond-to("md") {
     font-size: 28px;
@@ -86,36 +87,36 @@ a {
 }
 
 .h4 {
-  font-size: map-get(v.$font-sizes, h4);
-  font-weight: map-get(v.$font-weights, h4);
-  line-height: map-get(v.$line-heights, h4);
-  color: map-get(v.$colors, gray-0);
+  font-size: map.get(v.$font-sizes, h4);
+  font-weight: map.get(v.$font-weights, h4);
+  line-height: map.get(v.$line-heights, h4);
+  color: map.get(v.$colors, gray-0);
 }
 
 .h5 {
-  font-size: map-get(v.$font-sizes, h5);
-  font-weight: map-get(v.$font-weights, h5);
-  line-height: map-get(v.$line-heights, h4);
-  color: map-get(v.$colors, primary-100);
+  font-size: map.get(v.$font-sizes, h5);
+  font-weight: map.get(v.$font-weights, h5);
+  line-height: map.get(v.$line-heights, h4);
+  color: map.get(v.$colors, primary-100);
 }
 
 .body-lg {
-  font-size: map-get(v.$font-sizes, body-lg);
-  font-weight: map-get(v.$font-weights, body-lg);
-  line-height: map-get(v.$line-heights, body-lg);
-  color: map-get(v.$colors, gray-30);
+  font-size: map.get(v.$font-sizes, body-lg);
+  font-weight: map.get(v.$font-weights, body-lg);
+  line-height: map.get(v.$line-heights, body-lg);
+  color: map.get(v.$colors, gray-30);
 }
 
 .body-sm {
-  font-size: map-get(v.$font-sizes, body-sm);
-  font-weight: map-get(v.$font-weights, body-sm);
-  line-height: map-get(v.$line-heights, body-sm);
-  color: map-get(v.$colors, gray-0);
+  font-size: map.get(v.$font-sizes, body-sm);
+  font-weight: map.get(v.$font-weights, body-sm);
+  line-height: map.get(v.$line-heights, body-sm);
+  color: map.get(v.$colors, gray-0);
 }
 
 .small {
-  font-size: map-get(v.$font-sizes, small);
-  font-weight: map-get(v.$font-weights, small);
-  line-height: map-get(v.$line-heights, small);
-  color: map-get(v.$colors, gray-20);
+  font-size: map.get(v.$font-sizes, small);
+  font-weight: map.get(v.$font-weights, small);
+  line-height: map.get(v.$line-heights, small);
+  color: map.get(v.$colors, gray-20);
 }

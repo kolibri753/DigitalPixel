@@ -1,3 +1,4 @@
+@use "sass:map";
 @use "../base/variables" as v;
 @use "../base/mixins" as m;
 
@@ -7,12 +8,12 @@
     gap: 30px;
   
     &__link {
-      color: map-get(v.$colors, gray-0);
+      color: map.get(v.$colors, gray-0);
       text-decoration: none;
       @include m.transition(color 0.3s ease-in-out);
   
       &:hover {
-        color: map-get(v.$colors, primary-100);
+        color: map.get(v.$colors, primary-100);
       }
     }
   

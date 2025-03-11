@@ -1,3 +1,4 @@
+@use "sass:map";
 @use "../base/variables" as v;
 @use "../base/mixins" as m;
 
@@ -80,7 +81,7 @@
 
 .price {
   position: relative;
-  border-bottom: 2px solid map-get(v.$colors, gray-30);
+  border-bottom: 2px solid map.get(v.$colors, gray-30);
 
   &__grid {
     display: grid;
@@ -91,17 +92,17 @@
   }
 
   &__cell {
-    color: map-get(v.$colors, gray-30);
+    color: map.get(v.$colors, gray-30);
     margin-bottom: 16px;
   }
 
   &__duration {
-    color: map-get(v.$colors, gray-60);
+    color: map.get(v.$colors, gray-60);
     margin-bottom: 16px;
   }
 
   &__highlight {
-    color: map-get(v.$colors, primary-100);
+    color: map.get(v.$colors, primary-100);
 
     &--bigger {
       font-size: 24px;
@@ -117,7 +118,7 @@
     position: absolute;
     top: 50%;
     right: 0;
-    background-color: map-get(v.$colors, accented-100);
+    background-color: map.get(v.$colors, accented-100);
     padding: 2px 4px;
     font-weight: 700p;
     font-size: 12px;
